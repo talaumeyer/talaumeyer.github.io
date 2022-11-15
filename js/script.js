@@ -21,6 +21,9 @@ $(document).ready(function () {
     });
 
     $('.owl-carousel').owlCarousel({
+        autoplay: true,
+        autoplayTimeout: 3000,
+        goToFirst: false,
         loop: true,
         items: 4,
         responsive: {
