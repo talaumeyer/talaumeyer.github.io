@@ -1,5 +1,5 @@
-$(window).on("load", function(){
-    $(".loader .inner").fadeOut(750, function(){
+$(window).on("load", function () {
+    $(".loader .inner").fadeOut(750, function () {
         $(".loader").fadeOut(750);
     });
 });
@@ -16,9 +16,11 @@ $(document).ready(function () {
         strings: ["Student.", "Media informatics.", "Information science."],
         typeSpeed: 60,
         loop: true,
-        startDelay: 1000,
+        startDelay: 1500,
         showCursor: false,
     });
+
+
 
     $('.owl-carousel').owlCarousel({
         autoplay: true,
@@ -46,7 +48,9 @@ $(document).ready(function () {
 
     var skillsTopOffset = $(".skillsSection").offset().top;
     var statsTopOffset = $(".statsSection").offset().top;
+    var contactTopOffset = $(".contactSection").offset().top;
     var countUpFinished = false;
+    var typingFinished = false;
 
     $(window).scroll(function () {
 
@@ -80,6 +84,20 @@ $(document).ready(function () {
             countUpFinished = true;
 
         }
+
+        if (!typingFinished && window.pageYOffset > contactTopOffset - $(window).height() + 200) {
+
+            var typedContact = new Typed(".contactTyped", {
+                strings: ["I would love to hear from you!"],
+                typeSpeed: 100,
+                loop: false,
+                startDelay: 500,
+                showCursor: false,
+            });
+
+            typingFinished = true;
+
+        }
     });
 
     $("#navigation li a").click(function (e) {
@@ -87,7 +105,7 @@ $(document).ready(function () {
 
         var targetElement = $(this).attr("href");
         var targetPosition = $(targetElement).offset().top;
-        $("html, body").animate({scrollTop: targetPosition - 50}, "slow");
+        $("html, body").animate({ scrollTop: targetPosition - 50 }, "slow");
 
     });
 
