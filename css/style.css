@@ -296,9 +296,17 @@ body {
 
 .impressum {
     text-align: center;
+    border-style: solid;
+    margin: 50px 50px;
+    border-width: 1px;
+    padding: 50px 50px;
+    text-align: center;
+    border-color: #333;
+    
 }
 
 .impressum a{
     color: #833471;
     text-decoration: none;
 }
+
