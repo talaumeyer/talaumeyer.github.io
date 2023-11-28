@@ -13,7 +13,7 @@ $(document).ready(function () {
     });
 
     var typed = new Typed(".typed", {
-        strings: ["Student.", "Media informatics.", "Information science."],
+        strings: ["Software Development.", "Media informatics.", "Information science."],
         typeSpeed: 60,
         loop: true,
         startDelay: 1500,
